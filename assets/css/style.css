@@ -1,0 +1,235 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "menu"
+    "filtros"
+    "principal"
+    "pie";
+
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+nav {
+  grid-area: menu;
+  background-color: rgb(54, 54, 211);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px 0;
+  align-items: center;
+}
+
+nav .titulo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+}
+
+nav .subMenu2 {
+  display: none;
+}
+
+.filtros {
+  grid-area: filtros;
+  background-color: rgb(209, 202, 202);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 10px 10px;
+}
+
+.filtros select {
+  font-size: 18px;
+  padding: 6px;
+  font-size: 14px;
+}
+
+main {
+  grid-area: principal;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+}
+
+.cards .normal {
+  display: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 1fr;
+  border: 1px solid gray;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.card img {
+  width: 50%;
+}
+
+.card button {
+  background-color: blue;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.card div {
+  padding: 10px;
+}
+
+.numeroPag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+}
+
+.numeroPag button {
+  width: 30px;
+  height: 30px;
+  color: blue;
+  background-color: #ffffff;
+  border: 1px solid gray;
+}
+
+footer {
+  grid-area: pie;
+  background-color: rgb(27, 12, 87);
+}
+
+footer .icono {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6px;
+  padding-top: 10px;
+}
+
+footer .titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 10px;
+}
+
+/* version tablet */
+@media (min-width: 576px) {
+  body {
+    grid-template-columns: 2fr 6fr;
+    grid-template-areas:
+      "menu menu"
+      "filtros principal"
+      "pie pie";
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav .subMenu {
+    display: none;
+  }
+
+  nav .subMenu2 {
+    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+    align-items: flex-start;
+    font-weight: bolder;
+    font-size: 14px;
+    color: white;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cards .tablet {
+    display: block;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  footer .titulo {
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+/* version normal */
+@media (min-width: 992px) {
+  body {
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas:
+      "menu filtros"
+      "menu principal"
+      "pie principal";
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  nav .subMenu {
+    display: none;
+  }
+
+  nav .subMenu2 {
+    display: block;
+    justify-content: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+    font-weight: bolder;
+    font-size: 14px;
+    color: white;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .cards .normal {
+    display: block;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  footer .titulo {
+    font-size: 10px;
+    text-align: center;
+  }
+}
