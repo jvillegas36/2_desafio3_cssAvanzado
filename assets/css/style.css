@@ -233,3 +233,27 @@ footer .titulo {
     text-align: center;
   }
 }
+
+
+.btn{
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #315cfd;
+  color: white;
+  font-size: 1.01em;
+}
+
+
+.btnAdd{
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btnAdd:hover {
+  background: #337e36;
+  color: white;
+  font-size: 1.01em;
+}
